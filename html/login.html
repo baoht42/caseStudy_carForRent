@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rental Car</title>
+    <link rel="stylesheet" href="../css/fileCss/loginAndRegister.css">
+</head>
+<body>
+<div class="container" id="loginContainer">
+    <h1>Rental Car Service</h1>
+    <form id="loginForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <div class="btn-container">
+            <button type="button" onclick="login()">Login</button>
+            <button type="button" onclick="showRegisterForm()">Register</button>
+        </div>
+    </form>
+</div>
+<script src="../js/loginAndRegister.js"></script>
+</body>
+</html>

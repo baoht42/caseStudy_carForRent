@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/fileCss/loginAndRegister.css">
+</head>
+<body>
+<div class="container" id="registerContainer">
+    <h1>Register</h1>
+    <form id="registerForm">
+        <label for="newUsername">New Username</label>
+        <input type="text" id="newUsername" name="newUsername" required>
+
+        <label for="newPassword">New Password</label>
+        <input type="password" id="newPassword" name="newPassword" required>
+
+        <label for="newPhonenumber">New PhoneNumber</label>
+        <input type="text" id="newPhonenumber" name="newPhonenumber" required>
+
+        <label for="newEmail">Email</label>
+        <input type="text" id="newEmail" name="newEmail" required>
+
+        <div class="btn-container">
+            <button type="button" onclick="register()">Register</button>
+            <button type="button" onclick="showLoginForm()">Back to Login</button>
+        </div>
+    </form>
+</div>
+<script src="../js/loginAndRegister.js"></script>
+</body>
+</html>
