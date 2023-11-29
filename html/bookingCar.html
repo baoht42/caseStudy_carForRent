@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Cars</title>
+</head>
+<body>
+<div class="container">
+    <h1>Booking Details</h1>
+    <p id="selectedLocation"></p>
+
+
+    <div id="rentalDetails">
+        <img id="carImage" src= "" alt="Car Image" width="200">
+        <p id="carPrice"></p>
+        <p id="contactInfo"></p>
+    </div>
+
+
+    <label for="carTypeSelect">Select Car Type:</label>
+    <select id="carTypeSelect"></select>
+    <button onclick="calculateTotal()">Calculate Total</button>
+    <p id="totalPrice"></p>
+
+
+    <button onclick="proceedToPayment()">Proceed to Payment</button>
+</div>
+<script src="../js/bookingAndPaying.js"></script>
+</body>
+</html>

@@ -33,6 +33,7 @@ function displayRentalLocations() {
 
 function getRentalLocations() {
     return [
+        { name:  '' },
         { name: 'Đà Nẵng' },
         { name: 'Sài Gòn' },
         { name: 'Hà Nội' },
@@ -43,11 +44,15 @@ function getRentalLocations() {
 }
 
 function continueToBooking() {
-    var selectedLocation = document.getElementById('rentalLocationsSelect').value;
+    let selectedLocation = document.getElementById('rentalLocationsSelect').value;
     if (selectedLocation) {
-        alert('You selected: ' + selectedLocation);
-        // Add logic to handle the selected location, e.g., redirect to booking page
+        alert('You selectedLocation: ' + selectedLocation);
+        //Sau khi continue
+        //Hiển thị hình ảnh xe kèm sdt người cho thuê, và giá ở thẻ html bookingCar
+        window.location.href = "bookingCar.html";
+
+
     } else {
         alert('Please select a rental location.');
-    }
+    }return selectedLocation;
 }
