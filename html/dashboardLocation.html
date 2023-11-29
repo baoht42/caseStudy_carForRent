@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard Location</title>
-    <link rel="stylesheet" href="../css/fileCss/loginAndRegister.css">
+    <<link rel="stylesheet" href="../css/fileCss/loginAndRegister.css">
 
 </head>
 <body>
-<div class="container">
+<div class="container" id="rentalLocation">
     <h1>List of Location</h1>
     <p id="userInfo"></p>
-    <div id="rentalLocations">
 
+    <label for="rentalLocationsSelect">Select Rental Location:</label>
+    <select id="rentalLocationsSelect"></select><br><br>
+
+    <button onclick="continueToBooking()">Continue</button>
     </div>
-</div>
-
+<script src="/js/dashboardLocation.js"></script>
 </body>
 </html>

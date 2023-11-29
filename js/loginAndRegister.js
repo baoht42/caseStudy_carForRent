@@ -10,7 +10,9 @@ function login() {
     let checkUser = users.find(user => user.username === username && user.password === password);
 
     if (checkUser) {
-        alert('Login successful!');
+        // alert('Login successful!');
+        localStorage.setItem("loggedInUser", JSON.stringify(checkUser))
+        window.location.href = "../html/dashboardLocation.html"
     } else {
         alert('Invalid username or password. Please try again.');
     }
@@ -24,25 +26,29 @@ function register() {
     let newEmail = document.getElementById('newEmail').value;
 
     // Kiểm tra xem đã có thông tin người dùng trong Local Storage chưa
-    let users = JSON.parse(localStorage.getItem('users')) ;
+    let users = JSON.parse(localStorage.getItem('users'));
 
     // Kiểm tra xem tên người dùng đã tồn tại chưa
     let existingUser = users.find(user => user.username === newUsername);
 
-    if (existingUser) {
-        alert('Username already exists. Choose another username.');
-    } else {
+    if (!existingUser) {
         // Thêm người dùng mới vào mảng
-        users.push({ username: newUsername, password: newPassword,
-                     phonenumber:newPhonenumber, email: newEmail });
+        users.push({
+            username: newUsername, password: newPassword,
+            phonenumber: newPhonenumber, email: newEmail
+        });
 
         // Lưu mảng người dùng vào Local Storage
         localStorage.setItem('users', JSON.stringify(users));
 
         // Thông báo đăng ký thành công
         alert('Registration successful!');
+    } else {
+        alert('Username already exists. Choose another username.');
+
     }
 }
+
 function showRegisterForm() {
     // Redirect to register.html
     window.location.href = "register.html";
