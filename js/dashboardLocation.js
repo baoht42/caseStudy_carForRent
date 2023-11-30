@@ -16,7 +16,7 @@ function isLoggedIn() {
 function displayUserInfo() {
     let userInfoContainer = document.getElementById('userInfo');
     let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-    userInfoContainer.textContent = 'Logged in as: ' + loggedInUser.username;
+    userInfoContainer.innerHTML = 'Logged in as: ' + loggedInUser.username;
 }
 
 function displayRentalLocations() {
@@ -26,7 +26,7 @@ function displayRentalLocations() {
     rentalLocations.forEach(function(location) {
         let option = document.createElement('option');
         option.value = location.name;
-        option.textContent = location.name;
+        option.innerHTML = location.name;
         locationsSelect.appendChild(option);
     });
 }
@@ -47,6 +47,9 @@ function continueToBooking() {
     let selectedLocation = document.getElementById('rentalLocationsSelect').value;
     if (selectedLocation) {
         alert('You selectedLocation: ' + selectedLocation);
+        //lưu vào local storage
+        localStorage.setItem('selectedLocation', selectedLocation);
+
         //Sau khi continue
         //Hiển thị hình ảnh xe kèm sdt người cho thuê, và giá ở thẻ html bookingCar
         window.location.href = "bookingCar.html";
