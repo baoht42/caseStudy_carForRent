@@ -13,13 +13,17 @@
 
     <div id="rentalDetails">
         <img id="carImage" src= "" alt="Car Image" width="200">
-        <p id="carPrice"></p>
+        <p id="nameOfBranch"></p>
         <p id="contactInfo"></p>
     </div>
 
 
+    <label for="rentalDays">Rental Days:</label>
+    <input type="number" id="rentalDays" min="1" value="1">
+
     <label for="carTypeSelect">Select Car Type:</label>
     <select id="carTypeSelect"></select>
+
     <button onclick="calculateTotal()">Calculate Total</button>
     <p id="totalPrice"></p>
 

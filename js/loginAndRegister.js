@@ -57,3 +57,13 @@ function showRegisterForm() {
 function showLoginForm() {
     window.location.href = "login.html";
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    document.getElementById('password').addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            // Nếu phím Enter được nhấn, gọi hàm login
+            login();
+        }
+    });
+});
