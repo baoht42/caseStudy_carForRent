@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+    <link rel="stylesheet" href="../css/fileCss/loginAndRegister.css">
+</head>
+<body>
+<div class="container">
+    <h1>Payment Details</h1>
+    <p id="paymentAmount"></p>
+
+    <!-- Hiển thị mã QR code -->
+        <div id="qrcode"></div>
+    <p>Transfer content syntax:</p>
+    <p>DateRent_Name_PhoneNumber</p>
+
+    <!-- Nút xác nhận thanh toán -->
+        <button onclick="confirmPayment()">Confirm Payment</button>
+
+</div>
+<script src="../js/payment.js"></script>
+
+</body>
+</html>

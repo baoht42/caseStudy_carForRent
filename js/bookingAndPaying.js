@@ -74,11 +74,14 @@ function calculateTotal() {
     let totalRental = rentalDays * selectedPrice;
 
     document.getElementById('totalPrice').innerHTML = 'Total Price: $' + totalRental;
+    // lưu giá tiền tổng vào một local storage
+    localStorage.setItem('totalRental', totalRental);
 }
 
 //in ra màn hình thông báo để chuyển đến bước thanh toán
 function proceedToPayment() {
     let total = document.getElementById('totalPrice').innerHTML;
     alert('Proceeding to payment. Total Amount: ' + total);
+    window.location.href= "payment.html";
 
 }
