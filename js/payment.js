@@ -26,6 +26,8 @@ function generateQRCode(totalRental) {
         element: qrcodeContainer,
         value: paymentDetails
     });
+
+    document.getElementById("img-qr").src = qr.toDataURL('image/jpeg')
 }
 
 function confirmPayment() {
